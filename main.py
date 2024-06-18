@@ -10,7 +10,7 @@ tempoEsperaSemaforo = ctrl.Antecedent(np.arange(0, 10, 1), 'Tempo Espera Semafor
 duracaoSinalVerde = ctrl.Consequent(np.arange(0, 9, 1), 'Duracao Sinal Verde (Minutos)') # Duracao do sinal no verde de 0 a 8 minutos
 
 
-####################################
+#################################
 # Cria as funções de pertinência
 densidadeTrafego['baixa'] = fuzz.trimf(densidadeTrafego.universe, [0, 0, 3])
 densidadeTrafego['média'] = fuzz.trimf(densidadeTrafego.universe, [2, 4, 7])
@@ -53,12 +53,11 @@ duracaoSinalVerde_simulador = ctrl.ControlSystemSimulation(duracaoSinalVerde_ctr
 # teste - print(densidadeTrafego)
 
 # Entrando com valores para a densidade do tráfego local e o tempo de espera no semáforo
-duracaoSinalVerde_simulador.input['Densidade Trafego (Grau)'] = 6
-duracaoSinalVerde_simulador.input['Tempo Espera Semaforo (Minutos)'] = 2
+duracaoSinalVerde_simulador.input['Densidade Trafego (Grau)'] = 8
+duracaoSinalVerde_simulador.input['Tempo Espera Semaforo (Minutos)'] = 7
 
 # Computando o resultado
 duracaoSinalVerde_simulador.compute()
-
 # teste - print(duracaoSinalVerde_simulador.output['Duracao Sinal Verde (Minutos)'])
 #####################################
 
