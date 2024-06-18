@@ -36,3 +36,8 @@ O problema consiste em definir o tempo de duração de sinal verde de um tráfeg
 > **SE** a densidade do tráfego é média **E** o tempo de espera é curto, **ENTÃO** a duração do sinal verde é curta.
 
 > **SE** a densidade do tráfego é baixa **E** o tempo de espera é curto, **ENTÃO** a duração do sinal verde é curto.
+
+
+## Python V 3.11
+## pip install networkx
+## pip install scikit-fuzzy
